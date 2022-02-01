@@ -2,6 +2,8 @@
 
 import 'package:flutter/material.dart';
 
+import 'layout/news_app/news_layout.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -15,6 +17,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'App Theme Manasour ',
+      home: NewsLayout(),
     );
   }
 }
