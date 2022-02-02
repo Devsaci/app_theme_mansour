@@ -21,6 +21,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         scaffoldBackgroundColor: Colors.white,
         appBarTheme: AppBarTheme(
+          backwardsCompatibility: false,
           backgroundColor: Colors.white,
         ),
       ),
