@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'App Theme Manasour ',
-      home: SportsScreen(),
+      home: NewsLayout(),
     );
   }
 }
