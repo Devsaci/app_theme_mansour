@@ -40,6 +40,7 @@ class MyApp extends StatelessWidget {
         bottomNavigationBarTheme: BottomNavigationBarThemeData(
           showSelectedLabels: true,
           type: BottomNavigationBarType.fixed,
+          selectedItemColor: Colors.deepOrange
         ),
       ),
       home: NewsLayout(),
