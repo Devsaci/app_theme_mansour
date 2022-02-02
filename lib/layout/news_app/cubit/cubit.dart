@@ -29,10 +29,9 @@ class NewsCubit extends Cubit<NewsStates> {
       ),
       label: 'Science',
     ),
-
   ];
 
-  void changeBottomNavBar(int index){
-
+  void changeBottomNavBar(int index) {
+    currentIndex = index;
   }
 }
