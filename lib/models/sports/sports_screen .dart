@@ -14,11 +14,13 @@ class SportsScreen extends StatelessWidget {
         width: 300,
         height: 100,
         color: Colors.tealAccent,
-        child: Text(
-         " SportsScreen ",
-          style: TextStyle(
-            fontSize: 20.0,
-            fontWeight: FontWeight.bold,
+        child: Center(
+          child: Text(
+           " SportsScreen ",
+            style: TextStyle(
+              fontSize: 20.0,
+              fontWeight: FontWeight.bold,
+            ),
           ),
         ),
       ),

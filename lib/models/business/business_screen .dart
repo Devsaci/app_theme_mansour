@@ -12,11 +12,14 @@ class BusinessScreen extends StatelessWidget {
         width: 300,
         height: 100,
         color: Colors.orangeAccent,
-        child: Text(
-          "BusinessScreen ",
-          style: TextStyle(
-            fontSize: 20.0,
-            fontWeight: FontWeight.bold,
+        child: Center(
+          child: Text(
+            "BusinessScreen ",
+            style: TextStyle(
+              fontSize: 20.0,
+              fontWeight: FontWeight.bold,
+
+            ),
           ),
         ),
       ),

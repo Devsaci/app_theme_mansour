@@ -12,11 +12,13 @@ class ScienceScreen extends StatelessWidget {
         width: 300,
         height: 100,
         color: Colors.purpleAccent,
-        child: Text(
-          "ScienceScreen ",
-          style: TextStyle(
-            fontSize: 20.0,
-            fontWeight: FontWeight.bold,
+        child: Center(
+          child: Text(
+            "ScienceScreen ",
+            style: TextStyle(
+              fontSize: 20.0,
+              fontWeight: FontWeight.bold,
+            ),
           ),
         ),
       ),
