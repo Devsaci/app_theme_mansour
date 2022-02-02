@@ -23,8 +23,12 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: Colors.white,
         appBarTheme: AppBarTheme(
           backwardsCompatibility: false,
-          systemOverlayStyle: SystemUiOverlayStyle(),
+          systemOverlayStyle: SystemUiOverlayStyle(
+            statusBarColor:Colors.red,
+              statusBarIconBrightness: Brightness.dark,
+          ),
           backgroundColor: Colors.white,
+
         ),
       ),
       home: NewsLayout(),
