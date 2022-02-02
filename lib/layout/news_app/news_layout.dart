@@ -13,7 +13,7 @@ class NewsLayout extends StatelessWidget {
     return BlocProvider(
       create: (BuildContext context) => NewsCubit(),
       child: BlocConsumer<NewsCubit, NewsStates>(
-        builder: (context, state){
+        builder: (context, state) {
           var cubit = NewsCubit.get(context);
           return Scaffold(
             appBar: AppBar(
@@ -23,12 +23,11 @@ class NewsLayout extends StatelessWidget {
               ),
             ),
             bottomNavigationBar: BottomNavigationBar(
-
-              items: cubit.bottomItems
-            ),
+                currentIndex: cubit.currentIndex,
+                items: cubit.bottomItems),
           );
         },
-        listener: (context, state){},
+        listener: (context, state) {},
       ),
     );
   }
