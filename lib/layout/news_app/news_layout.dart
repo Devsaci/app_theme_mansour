@@ -22,31 +22,7 @@ class NewsLayout extends StatelessWidget {
                 'News App',
               ),
             ),
-            bottomNavigationBar: BottomNavigationBar(
-              items: [
-                BottomNavigationBarItem(
-                  icon: Icon(
-                    Icons.business,
-                    size: 40,
-                  ),
-                  label: 'Business',
-                ),
-                BottomNavigationBarItem(
-                  icon: Icon(
-                    Icons.sports_volleyball,
-                    size: 40,
-                  ),
-                  label: 'Sports',
-                ),
-                BottomNavigationBarItem(
-                  icon: Icon(
-                    Icons.science,
-                    size: 40,
-                  ),
-                  label: 'Science',
-                ),
-              ],
-            ),
+            bottomNavigationBar: cubit.bottomItems,
           );
         },
         listener: (context, state){},
