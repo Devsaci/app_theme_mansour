@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 
 class NewsLayout extends StatelessWidget {
@@ -5,8 +7,8 @@ class NewsLayout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.teal,
+    return Scaffold(
+
     );
   }
 }
