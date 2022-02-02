@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 import 'business/business_screen .dart';
 import 'layout/news_app/news_layout.dart';
@@ -22,6 +23,7 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: Colors.white,
         appBarTheme: AppBarTheme(
           backwardsCompatibility: false,
+          systemOverlayStyle: SystemUiOverlayStyle(),
           backgroundColor: Colors.white,
         ),
       ),
