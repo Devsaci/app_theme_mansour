@@ -39,7 +39,8 @@ class MyApp extends StatelessWidget {
           ),
         ),
         bottomNavigationBarTheme: BottomNavigationBarThemeData(
-          
+          showSelectedLabels: true,
+          type: BottomNavigationBarType.fixed,
         ),
       ),
       home: NewsLayout(),
