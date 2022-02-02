@@ -1,5 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -22,13 +24,19 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         scaffoldBackgroundColor: Colors.white,
         appBarTheme: AppBarTheme(
+          elevation: 0.0,
           backwardsCompatibility: false,
           systemOverlayStyle: SystemUiOverlayStyle(
-            statusBarColor:Colors.red,
-              statusBarIconBrightness: Brightness.dark,
+            statusBarColor: Colors.white,
+            statusBarIconBrightness: Brightness.dark,
           ),
           backgroundColor: Colors.white,
-
+          titleTextStyle: TextStyle(
+            letterSpacing: 10.0,
+            color: Colors.black,
+            fontSize: 20.0,
+            fontWeight: FontWeight.bold,
+          ),
         ),
       ),
       home: NewsLayout(),
