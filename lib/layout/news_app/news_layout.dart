@@ -14,6 +14,7 @@ class NewsLayout extends StatelessWidget {
           'News App',
         ),
       ),
+      bottomNavigationBar: BottomNavigationBar(items: []),
     );
   }
 }
