@@ -38,8 +38,11 @@ class MyApp extends StatelessWidget {
             fontWeight: FontWeight.bold,
           ),
         ),
+        bottomNavigationBarTheme: BottomNavigationBarThemeData(
+          
         ),
+      ),
       home: NewsLayout(),
-      );
+    );
   }
 }
