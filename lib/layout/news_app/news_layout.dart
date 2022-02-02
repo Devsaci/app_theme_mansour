@@ -19,23 +19,25 @@ class NewsLayout extends StatelessWidget {
           BottomNavigationBarItem(
             icon: Icon(
               Icons.business,
+              size: 40,
             ),
             label: 'Business',
           ),
           BottomNavigationBarItem(
             icon: Icon(
-              Icons.sports,
+              Icons.sports_volleyball,
+              size: 40,
             ),
             label: 'Sports',
           ),
           BottomNavigationBarItem(
             icon: Icon(
               Icons.science,
+              size: 40,
             ),
             label: 'Science',
           ),
         ],
-
       ),
     );
   }

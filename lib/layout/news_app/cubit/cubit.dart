@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:app_theme_mansour/layout/news_app/cubit/states.dart';
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
@@ -8,5 +10,25 @@ class NewsCubit extends Cubit<NewsStates> {
 
   static NewsCubit get(context) => BlocProvider.of(context);
   int currentIndex = 0;
-  List<BottomNavigationBarItem> bottomItems = [];
+  List<BottomNavigationBarItem> bottomItems = [
+    BottomNavigationBarItem(
+      icon: Icon(
+        Icons.business,
+      ),
+      label: 'Business',
+    ),
+    BottomNavigationBarItem(
+      icon: Icon(
+        Icons.sports,
+      ),
+      label: 'Sports',
+    ),
+    BottomNavigationBarItem(
+      icon: Icon(
+        Icons.science,
+      ),
+      label: 'Science',
+    ),
+
+  ];
 }
