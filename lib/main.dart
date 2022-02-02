@@ -5,10 +5,9 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import 'business/business_screen .dart';
+
 import 'layout/news_app/news_layout.dart';
-import 'science/science_screen .dart';
-import 'sports/sports_screen .dart';
+
 
 void main() {
   runApp(const MyApp());

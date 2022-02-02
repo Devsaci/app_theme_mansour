@@ -22,7 +22,10 @@ class NewsLayout extends StatelessWidget {
                 'News App',
               ),
             ),
-            bottomNavigationBar: cubit.bottomItems,
+            bottomNavigationBar: BottomNavigationBar(
+
+              items: cubit.bottomItems
+            ),
           );
         },
         listener: (context, state){},
