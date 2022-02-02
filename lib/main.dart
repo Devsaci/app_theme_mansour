@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 
+import 'business/business_screen .dart';
 import 'layout/news_app/news_layout.dart';
 
 void main() {
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'App Theme Manasour ',
-      home: NewsLayout(),
+      home: BusinessScreen(),
     );
   }
 }
