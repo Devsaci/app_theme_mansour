@@ -20,6 +20,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'App Theme Manasour ',
+      theme: ThemeData(),
       home: NewsLayout(),
     );
   }
