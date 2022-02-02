@@ -31,7 +31,9 @@ class MyApp extends StatelessWidget {
 
     return MaterialApp(
       debugShowCheckedModeBanner: false, ,
-      theme: ThemeData(),
+      theme: ThemeData(
+        appBarTheme: AppBarTheme(),
+    ),
       home: NewsLayout(),
     );
   }
