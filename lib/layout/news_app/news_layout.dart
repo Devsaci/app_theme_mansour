@@ -42,6 +42,8 @@ class NewsLayout extends StatelessWidget {
                   },
                 ).then((value) {
                   print(value.data.toString());
+                }).catchError((error){
+                  print(error);
                 });
               },
               child: Icon(Icons.add_a_photo),
