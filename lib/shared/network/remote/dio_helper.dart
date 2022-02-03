@@ -14,4 +14,9 @@ class DioHelper {
       ),
     );
   }
+
+  void getData(){
+    dio.get("path");
+  }
+
 }
