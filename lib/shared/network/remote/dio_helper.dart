@@ -14,8 +14,9 @@ class DioHelper {
 
   void getData({
     required String url,
+    required query,
   })
   {
-    dio.get(url);
+    dio.get(url, queryParameters: query,);
   }
 }
