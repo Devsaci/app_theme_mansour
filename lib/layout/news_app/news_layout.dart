@@ -40,7 +40,7 @@ class NewsLayout extends StatelessWidget {
                     'category':'business',
                     'apiKey':'65f7f556ec76449fa7dc7c0069f040ca',
                   },
-                ).then((value) => null);
+                ).then((value) => print(value.data.toString()));
               },
               child: Icon(Icons.add_a_photo),
             ),
