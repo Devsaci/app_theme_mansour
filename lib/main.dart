@@ -2,13 +2,21 @@
 
 import 'dart:ui';
 
+import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import 'layout/news_app/news_layout.dart';
+import 'shared/bloc_observer.dart';
 
 void main() {
-  runApp(const MyApp());
+  BlocOverrides.runZoned(
+        () {
+      // Use cubits...
+      runApp(MyApp());
+    },
+    blocObserver: MyBlocObserver(),
+  );
 }
 
 class MyApp extends StatelessWidget {
