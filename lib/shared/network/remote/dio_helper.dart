@@ -15,10 +15,8 @@ class DioHelper {
   Future<Response> getData({
     required String url,
     required query,
-  }) async {
-    return await dio.get(
+  }) async => await dio.get(
       url,
       queryParameters: query,
     );
-  }
 }
