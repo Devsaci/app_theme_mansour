@@ -3,6 +3,7 @@
 import 'package:app_theme_mansour/layout/news_app/cubit/states.dart';
 import 'package:app_theme_mansour/models/business/business_screen%20.dart';
 import 'package:app_theme_mansour/models/science/science_screen%20.dart';
+import 'package:app_theme_mansour/models/settings/settings_screen%20.dart';
 import 'package:app_theme_mansour/models/sports/sports_screen%20.dart';
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
@@ -34,12 +35,19 @@ class NewsCubit extends Cubit<NewsStates> {
       ),
       label: 'Science',
     ),
+    BottomNavigationBarItem(
+      icon: Icon(
+        Icons.settings,
+      ),
+      label: 'Settings',
+    ),
   ];
 
   List<Widget> screens = [
     BusinessScreen(),
     SportsScreen(),
     ScienceScreen(),
+    SettingsScreen(),
   ];
 
   void changeBottomNavBar(int index) {
