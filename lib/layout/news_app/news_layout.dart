@@ -30,6 +30,10 @@ class NewsLayout extends StatelessWidget {
                 'News App',
               ),
             ),
+            floatingActionButton: FloatingActionButton(
+              onPressed: () {},
+              child: Icon(Icons.add_a_photo),
+            ),
             body: cubit.screens[cubit.currentIndex],
             bottomNavigationBar: BottomNavigationBar(
                 currentIndex: cubit.currentIndex,

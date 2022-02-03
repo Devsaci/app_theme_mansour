@@ -12,7 +12,7 @@ class DioHelper {
     );
   }
 
-  Future<Response> getData({
+  static Future<Response> getData({
     required String url,
     required query,
   }) async {
