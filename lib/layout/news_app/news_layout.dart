@@ -33,7 +33,7 @@ class NewsLayout extends StatelessWidget {
             ),
             floatingActionButton: FloatingActionButton(
               onPressed: () {
-                DioHelper.getData(url: 'url', query: 'query');
+                DioHelper.getData(url: 'v2/top-headlines', query: 'query');
               },
               child: Icon(Icons.add_a_photo),
             ),
