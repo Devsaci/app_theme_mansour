@@ -30,6 +30,10 @@ class MyApp extends StatelessWidget {
             statusBarIconBrightness: Brightness.dark,
           ),
           backgroundColor: Colors.white,
+          iconTheme: IconThemeData(
+            color: Colors.black,
+            size: 40,
+          ),
           titleTextStyle: TextStyle(
             letterSpacing: 10.0,
             color: Colors.black,
