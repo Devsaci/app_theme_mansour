@@ -5,9 +5,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-
 import 'layout/news_app/news_layout.dart';
-
 
 void main() {
   runApp(const MyApp());
@@ -42,12 +40,11 @@ class MyApp extends StatelessWidget {
           ),
         ),
         bottomNavigationBarTheme: BottomNavigationBarThemeData(
-          showSelectedLabels: true,
-          type: BottomNavigationBarType.fixed,
-          selectedItemColor: Colors.deepOrange,
-          elevation: 50.0,
-          backgroundColor: Colors.grey[300]
-        ),
+            showSelectedLabels: true,
+            type: BottomNavigationBarType.fixed,
+            selectedItemColor: Colors.deepOrange,
+            elevation: 50.0,
+            backgroundColor: Colors.grey[300]),
       ),
       home: NewsLayout(),
     );
