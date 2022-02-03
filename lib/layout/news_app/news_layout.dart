@@ -43,7 +43,7 @@ class NewsLayout extends StatelessWidget {
                 ).then((value) {
                   print(value.data.toString());
                 }).catchError((error){
-                  print(error);
+                  print(error.toString());
                 });
               },
               child: Icon(Icons.add_a_photo),
