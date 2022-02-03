@@ -2,6 +2,7 @@
 
 import 'package:app_theme_mansour/layout/news_app/cubit/cubit.dart';
 import 'package:app_theme_mansour/layout/news_app/cubit/states.dart';
+import 'package:app_theme_mansour/shared/network/remote/dio_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -31,7 +32,9 @@ class NewsLayout extends StatelessWidget {
               ),
             ),
             floatingActionButton: FloatingActionButton(
-              onPressed: () {},
+              onPressed: () {
+                DioHelper.getData(url: 'url', query: 'query');
+              },
               child: Icon(Icons.add_a_photo),
             ),
             body: cubit.screens[cubit.currentIndex],
