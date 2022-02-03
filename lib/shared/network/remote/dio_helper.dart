@@ -8,8 +8,9 @@ class DioHelper {
   static init(){
     dio = Dio(
       BaseOptions(
-        baseUrl: "",
+        baseUrl: 'https://newsapi.org/',
         receiveDataWhenStatusError: true,
+
       ),
     );
   }
