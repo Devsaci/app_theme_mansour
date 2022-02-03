@@ -12,11 +12,12 @@ class DioHelper {
     );
   }
 
-  void getData({
+  Future<Response> getData({
     required String url,
     required query,
   })
-  {
-    dio.get(url, queryParameters: query,);
+  async {
+    return await dio.get(url, queryParameters: query,);
+
   }
 }
