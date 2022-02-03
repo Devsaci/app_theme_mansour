@@ -48,6 +48,10 @@ class MyApp extends StatelessWidget {
           selectedIconTheme: IconThemeData(size: 40.0,),
         ),
       ),
+      darkTheme: ThemeData(
+        scaffoldBackgroundColor: Colors.black45,
+      ),
+      themeMode: ThemeMode.light,
       home: NewsLayout(),
     );
   }
