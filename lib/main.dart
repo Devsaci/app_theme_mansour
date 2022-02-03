@@ -8,11 +8,12 @@ import 'package:flutter/services.dart';
 
 import 'layout/news_app/news_layout.dart';
 import 'shared/bloc_observer.dart';
+import 'shared/network/remote/dio_helper.dart';
 
 void main() {
   BlocOverrides.runZoned(
-        () {
-      // Use cubits...
+    () {
+      DioHelper.init();
       runApp(MyApp());
     },
     blocObserver: MyBlocObserver(),
@@ -53,7 +54,9 @@ class MyApp extends StatelessWidget {
           selectedItemColor: Colors.deepOrange,
           elevation: 50.0,
           backgroundColor: Colors.grey[200],
-          selectedIconTheme: IconThemeData(size: 40.0,),
+          selectedIconTheme: IconThemeData(
+            size: 40.0,
+          ),
         ),
       ),
       darkTheme: ThemeData(
