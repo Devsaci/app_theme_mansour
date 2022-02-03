@@ -18,6 +18,9 @@ class NewsLayout extends StatelessWidget {
           return Scaffold(
             appBar: AppBar(
               centerTitle: true,
+              actions: [
+
+              ],
               title: Text(
                 'News App',
               ),
