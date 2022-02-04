@@ -11,8 +11,8 @@ class BusinessScreen extends StatelessWidget {
     return Row(
       children: [
         Container(
-          width: 350.0,
-          height: 700.0,
+          width: 120.0,
+          height: 120.0,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10.0),
             image: DecorationImage(
@@ -24,8 +24,15 @@ class BusinessScreen extends StatelessWidget {
         ),
         SizedBox(width: 20.0),
         Column(
+          mainAxisSize: MainAxisSize.min,
           children: [
-
+            Text(
+              'Title',
+              style: TextStyle(
+                fontSize: 18.0,
+                fontWeight: FontWeight.w600,
+              ),
+            ),
           ],
         ),
       ],
