@@ -25,12 +25,19 @@ class BusinessScreen extends StatelessWidget {
         SizedBox(width: 20.0),
         Column(
           mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
               'Title',
               style: TextStyle(
                 fontSize: 18.0,
                 fontWeight: FontWeight.w600,
+              ),
+            ),
+            Text(
+              '0212124561235453',
+              style: TextStyle(
+                color: Colors.grey,
               ),
             ),
           ],
