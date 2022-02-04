@@ -2,6 +2,7 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class BusinessScreen extends StatelessWidget {
   const BusinessScreen({Key? key}) : super(key: key);
@@ -23,24 +24,28 @@ class BusinessScreen extends StatelessWidget {
           ),
         ),
         SizedBox(width: 20.0),
-        Column(
-          mainAxisSize: MainAxisSize.min,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              'Title',
-              style: TextStyle(
-                fontSize: 18.0,
-                fontWeight: FontWeight.w600,
+        Container(
+          height: 120.0,
+          child: Column(
+            // mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              Text(
+                'Title',
+                style: TextStyle(
+                  fontSize: 18.0,
+                  fontWeight: FontWeight.w600,
+                ),
               ),
-            ),
-            Text(
-              '0212124561235453',
-              style: TextStyle(
-                color: Colors.grey,
+              Text(
+                '0212124561235453',
+                style: TextStyle(
+                  color: Colors.grey,
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ],
     );
