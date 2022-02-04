@@ -14,17 +14,21 @@ class BusinessScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocConsumer<NewsCubit,NewsStates>(
+    return BlocConsumer<NewsCubit, NewsStates>(
       listener: (BuildContext context, state) {},
       builder: (BuildContext context, Object? state) {
         return ConditionalBuilder(
           condition: state is! NewsGetBusinessLoadingState,
+          builder: (BuildContext context) => ListView.separated(
+            itemBuilder: itemBuilder, // Error
+            separatorBuilder: separatorBuilder, // Error
+            itemCount: itemCount, // Error
+          ),
           fallback: (BuildContext context) => Center(
             child: CircularProgressIndicator(),
           ),
-          builder: (BuildContext context) {}, // Error
         );
-      },//Error
+      }, //Error
     );
   }
 }
