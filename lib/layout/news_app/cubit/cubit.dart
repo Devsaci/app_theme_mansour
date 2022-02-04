@@ -7,6 +7,7 @@ import 'package:app_theme_mansour/models/settings/settings_screen%20.dart';
 import 'package:app_theme_mansour/models/sports/sports_screen%20.dart';
 import 'package:app_theme_mansour/shared/network/remote/dio_helper.dart';
 import 'package:bloc/bloc.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -66,7 +67,10 @@ class NewsCubit extends Cubit<NewsStates> {
         'apiKey': '65f7f556ec76449fa7dc7c0069f040ca',
       },
     ).then((value) {
-      print(value.data['articles'][0]['title']);
+      // print(value.data['articles'][0]['title']);
+      business = value.data['articles'];
+      print(business[0]['title']);
+      emit(state);
     }).catchError((error){
       print(error.toString());
     });
