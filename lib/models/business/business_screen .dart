@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
 
@@ -7,22 +7,12 @@ class BusinessScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Container(
-        width: 300,
-        height: 100,
-        color: Colors.orangeAccent,
-        child: Center(
-          child: Text(
-            "BusinessScreen ",
-            style: TextStyle(
-              fontSize: 20.0,
-              fontWeight: FontWeight.bold,
+    return Row(
+      children: [
+        Container(
 
-            ),
-          ),
         ),
-      ),
+      ],
     );
   }
 }
