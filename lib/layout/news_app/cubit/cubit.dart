@@ -54,4 +54,9 @@ class NewsCubit extends Cubit<NewsStates> {
     currentIndex = index;
     emit(NewsBottomNavState());
   }
+
+  List<dynamic> business = [];
+  void getBusiness(){
+    
+  }
 }
