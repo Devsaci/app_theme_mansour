@@ -24,27 +24,35 @@ class BusinessScreen extends StatelessWidget {
           ),
         ),
         SizedBox(width: 20.0),
-        Container(
-          height: 120.0,
-          child: Column(
-            // mainAxisSize: MainAxisSize.min,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              Text(
-                'Title',
-                style: TextStyle(
-                  fontSize: 18.0,
-                  fontWeight: FontWeight.w600,
+        Expanded(
+          child: Container(
+            height: 120.0,
+            child: Column(
+              // mainAxisSize: MainAxisSize.min,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Expanded(
+                  child: Text(
+                    'Title  Title Title Title Title Title Title Title Title '
+                        'Title Title Title Title Title Title Title Title Title Title'
+                        ' Title Title Title Title Title Title Title Title Title Title ',
+                    style: TextStyle(
+                      fontSize: 18.0,
+                      fontWeight: FontWeight.w600,
+                    ),
+                    maxLines: 4,
+                    overflow: TextOverflow.ellipsis,
+                  ),
                 ),
-              ),
-              Text(
-                '0212124561235453',
-                style: TextStyle(
-                  color: Colors.grey,
+                Text(
+                  '021212135453',
+                  style: TextStyle(
+                    color: Colors.grey,
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ],
