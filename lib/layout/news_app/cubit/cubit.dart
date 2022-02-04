@@ -59,7 +59,7 @@ class NewsCubit extends Cubit<NewsStates> {
 
   List<dynamic> business = [];
   void getBusiness(){
-    emit(NewsLoadingState());
+    emit(NewsGetBusinessLoadingState());
     DioHelper.getData(
       url: 'v2/top-headlines',
       query: {
