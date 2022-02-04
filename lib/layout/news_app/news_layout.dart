@@ -31,23 +31,11 @@ class NewsLayout extends StatelessWidget {
                 'News App',
               ),
             ),
-            floatingActionButton: FloatingActionButton(
-              onPressed: () {
-                DioHelper.getData(
-                  url: 'v2/top-headlines',
-                  query: {
-                    'country': 'eg',
-                    'category': 'business',
-                    'apiKey': '65f7f556ec76449fa7dc7c0069f040ca',
-                  },
-                ).then((value) {
-                  print(value.data['articles'][0]['title']);
-                }).catchError((error){
-                  print(error.toString());
-                });
-              },
-              child: Icon(Icons.add_a_photo),
-            ),
+            // floatingActionButton: FloatingActionButton(
+            //   onPressed: () {
+            //     },
+            //   child: Icon(Icons.add_a_photo),
+            // ),
             body: cubit.screens[cubit.currentIndex],
             bottomNavigationBar: BottomNavigationBar(
                 currentIndex: cubit.currentIndex,
