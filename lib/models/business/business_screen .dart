@@ -16,7 +16,15 @@ class BusinessScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocConsumer<NewsCubit,NewsStates>(
       listener: (BuildContext context, state) {},
-      builder: (BuildContext context, Object? state) {},//Error
+      builder: (BuildContext context, Object? state) {
+        return ConditionalBuilder(
+          condition: null, // Error
+          fallback: (BuildContext context) => Center(
+            child: CircularProgressIndicator(),
+          ),
+          builder: (BuildContext context) {}, // Error
+        );
+      },//Error
     );
   }
 }
