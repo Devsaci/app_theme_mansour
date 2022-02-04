@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 
-Widget? buildArticleItem() {
+Widget buildArticleItem() {
   return Padding(
     padding: const EdgeInsets.all(20.0),
     child: Row(
