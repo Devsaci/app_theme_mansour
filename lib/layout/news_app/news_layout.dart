@@ -12,7 +12,7 @@ class NewsLayout extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (BuildContext context) => NewsCubit(),
+      create: (BuildContext context) => NewsCubit()..getBusiness(),
       child: BlocConsumer<NewsCubit, NewsStates>(
         builder: (context, state) {
           var cubit = NewsCubit.get(context);
