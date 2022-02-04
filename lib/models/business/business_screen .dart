@@ -18,7 +18,7 @@ class BusinessScreen extends StatelessWidget {
       listener: (BuildContext context, state) {},
       builder: (BuildContext context, Object? state) {
         return ConditionalBuilder(
-          condition: null, // Error
+          condition: state is! NewsGetBusinessLoadingState,
           fallback: (BuildContext context) => Center(
             child: CircularProgressIndicator(),
           ),
