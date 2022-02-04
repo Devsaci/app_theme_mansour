@@ -20,9 +20,9 @@ class BusinessScreen extends StatelessWidget {
         return ConditionalBuilder(
           condition: state is! NewsGetBusinessLoadingState,
           builder: (BuildContext context) => ListView.separated(
-            itemBuilder: itemBuilder, // Error
-            separatorBuilder: separatorBuilder, // Error
-            itemCount: itemCount, // Error
+            itemBuilder: (context, index) => buildArticleItem(),
+            separatorBuilder: (context, index) => myDivider(),
+            itemCount:10,
           ),
           fallback: (BuildContext context) => Center(
             child: CircularProgressIndicator(),
