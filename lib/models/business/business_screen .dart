@@ -13,7 +13,7 @@ class BusinessScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return ConditionalBuilder(
       condition: null, // Error
-      fallback: (BuildContext context) => CircularProgressIndicator(), // Error
+      fallback: (BuildContext context) => Center(child: CircularProgressIndicator()), // Error
       builder: (BuildContext context) {}, // Error
     );
   }
