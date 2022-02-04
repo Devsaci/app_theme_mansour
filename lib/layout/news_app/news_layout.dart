@@ -41,7 +41,7 @@ class NewsLayout extends StatelessWidget {
                     'apiKey': '65f7f556ec76449fa7dc7c0069f040ca',
                   },
                 ).then((value) {
-                  print(value.data.toString());
+                  print(value.data['totalResults']);
                 }).catchError((error){
                   print(error.toString());
                 });
