@@ -10,7 +10,9 @@ class BusinessScreen extends StatelessWidget {
     return Row(
       children: [
         Container(
-
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(10.0),
+          ),
         ),
       ],
     );
