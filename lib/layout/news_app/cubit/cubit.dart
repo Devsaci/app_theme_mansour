@@ -65,7 +65,7 @@ class NewsCubit extends Cubit<NewsStates> {
       query: {
         'country': 'eg',
         'category': 'business',
-        'apiKey': '65f7f556ec76449fa7dc7c0069f040ca',
+        'apiKey': 'ea0f2b208b944b08ab554dc5e9f5505f',
       },
     ).then((value) {
       // print(value.data['articles'][0]['title']);
