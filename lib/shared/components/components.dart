@@ -38,7 +38,7 @@ Widget buildArticleItem(article) => Padding(
                   ),
                 ),
                 Text(
-                  '021212135453',
+                  '${article['publishedAt']}',
                   style: TextStyle(
                     color: Colors.grey,
                   ),
