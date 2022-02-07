@@ -2,8 +2,7 @@
 
 import 'package:flutter/material.dart';
 
-Widget buildArticleItem() {
-  return Padding(
+Widget buildArticleItem(article) => Padding(
     padding: const EdgeInsets.all(20.0),
     child: Row(
       children: [
@@ -52,7 +51,7 @@ Widget buildArticleItem() {
       ],
     ),
   );
-}
+
 Widget myDivider() => Padding(
   padding: const EdgeInsetsDirectional.only(
     start: 20.0,
