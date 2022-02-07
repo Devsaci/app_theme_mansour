@@ -28,7 +28,7 @@ Widget buildArticleItem(article) => Padding(
               children: [
                 Expanded(
                   child: Text(
-                    'Title',
+                    '${article['title']}',
                     style: TextStyle(
                       fontSize: 18.0,
                       fontWeight: FontWeight.w600,
