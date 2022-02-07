@@ -12,8 +12,7 @@ Widget buildArticleItem(article) => Padding(
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10.0),
             image: DecorationImage(
-              image: NetworkImage(
-                  'https://cdn.pixabay.com/photo/2015/04/08/15/09/daisies-712892__340.jpg'),
+              image: NetworkImage('${article['urlToImage']}'),
               fit: BoxFit.cover,
             ),
           ),
