@@ -1,5 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
+import 'dart:js';
+
 import 'package:app_theme_mansour/layout/news_app/cubit/cubit.dart';
 import 'package:app_theme_mansour/layout/news_app/cubit/states.dart';
 import 'package:app_theme_mansour/shared/components/components.dart';
@@ -21,7 +23,7 @@ class BusinessScreen extends StatelessWidget {
           condition: state is! NewsGetBusinessLoadingState,
           builder: (BuildContext context) => ListView.separated(
             physics: BouncingScrollPhysics(),
-            itemBuilder: (context, index) => buildArticleItem(),
+            itemBuilder: (context, index) => buildArticleItem(NewsCubit.get(context).business[index]),// Error
             separatorBuilder: (context, index) => myDivider(),
             itemCount:10,
           ),
