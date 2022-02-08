@@ -22,7 +22,7 @@ class BusinessScreen extends StatelessWidget {
           condition: state is! NewsGetBusinessLoadingState,
           builder: (BuildContext context) => ListView.separated(
             physics: BouncingScrollPhysics(),
-            itemBuilder: (context, index) => buildArticleItem(List[index]),// Error
+            itemBuilder: (context, index) => buildArticleItem(List[index]),
             separatorBuilder: (context, index) => myDivider(),
             itemCount:10,
           ),
