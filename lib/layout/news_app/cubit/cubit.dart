@@ -61,11 +61,12 @@ class NewsCubit extends Cubit<NewsStates> {
   void getBusiness(){
     emit(NewsGetBusinessLoadingState());
     DioHelper.getData(
-      url: 'v2/top-headlines',
+      url: 'v2/everything',
       query: {
-        'country': 'eg',
-        'category': 'business',
-        'apiKey': 'ea0f2b208b944b08ab554dc5e9f5505f',
+        'q':'Apple',
+        'from':'2022-02-08',
+        'sortBy':'popularity',
+        'apiKey':'ea0f2b208b944b08ab554dc5e9f5505f',
       },
     ).then((value) {
       // print(value.data['articles'][0]['title']);
