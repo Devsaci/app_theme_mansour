@@ -54,9 +54,10 @@ Widget buildArticleItem(article) => Padding(
 Widget myDivider() => Padding(
   padding: const EdgeInsetsDirectional.only(
     start: 20.0,
+    end: 20.0
   ),
   child: Container(
-    width: double.infinity,
+    width: 200,
     height: 1.0,
     color: Colors.black,
   ),
