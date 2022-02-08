@@ -66,7 +66,7 @@ class NewsCubit extends Cubit<NewsStates> {
         'q':'Apple',
         'from':'2022-02-08',
         'sortBy':'popularity',
-        'apiKey':'ea0f2b208b944b08ab554dc5e9f5505f',
+        'apiKey':'d67997c8467143f0b8beee2421b0984b',
       },
     ).then((value) {
       // print(value.data['articles'][0]['title']);
