@@ -15,12 +15,13 @@ class NewsGetBusinessErrorState extends NewsStates {
 
   NewsGetBusinessErrorState(this.error);
 }
+
 class NewsGetSportsLoadingState extends NewsStates {}
+
 class NewsGetSportsSuccessState extends NewsStates {}
-class NewsGetSportsErrorState extends NewsStates
-{
+
+class NewsGetSportsErrorState extends NewsStates {
   final String error;
 
   NewsGetSportsErrorState(this.error);
 }
-
