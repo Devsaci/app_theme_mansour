@@ -105,7 +105,5 @@ class NewsCubit extends Cubit<NewsStates> {
     } else {
       emit(NewsGetSportsSuccessState());
     }
-
-
   }
 }
