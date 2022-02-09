@@ -15,3 +15,5 @@ class NewsGetBusinessErrorState extends NewsStates {
 
   NewsGetBusinessErrorState(this.error);
 }
+class NewsGetSportsLoadingState extends NewsStates {}
+
