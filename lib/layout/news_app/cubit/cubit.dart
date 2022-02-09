@@ -82,7 +82,7 @@ class NewsCubit extends Cubit<NewsStates> {
   List<dynamic> sports = [];
 
   void getSports() {
-    emit(state);
+    emit(NewsGetSportsLoadingState());
     DioHelper.getData(
       url: 'v2/top-headlines',
       query: {
