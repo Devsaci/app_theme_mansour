@@ -96,6 +96,7 @@ class NewsCubit extends Cubit<NewsStates> {
       emit(NewsGetSportsSuccessState());
     }).catchError((error) {
       print(error.toString());
+      emit(NewsGetSportsErrorState(error.toString()));
     });
   }
 }
