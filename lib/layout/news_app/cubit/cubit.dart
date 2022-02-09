@@ -92,5 +92,6 @@ void getSports() {
     },
   ).then((value) {
     sports = value.data['articles'];
+    print(sports[0]['title']);
   });
 }
