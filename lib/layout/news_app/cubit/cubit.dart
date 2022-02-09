@@ -54,6 +54,9 @@ class NewsCubit extends Cubit<NewsStates> {
 
   void changeBottomNavBar(int index) {
     currentIndex = index;
+    if(index == 1) {
+      getSports();
+    }
     emit(NewsBottomNavState());
   }
 
