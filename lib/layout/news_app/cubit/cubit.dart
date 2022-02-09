@@ -58,25 +58,27 @@ class NewsCubit extends Cubit<NewsStates> {
   }
 
   List<dynamic> business = [];
-  void getBusiness(){
+
+  void getBusiness() {
     emit(NewsGetBusinessLoadingState());
     DioHelper.getData(
       url: 'v2/top-headlines',
-      query:
-      {
-        'country':'eg',
-        'category':'business',
-        'apiKey':'ea0f2b208b944b08ab554dc5e9f5505f'
+      query: {
+        'country': 'eg',
+        'category': 'business',
+        'apiKey': 'ea0f2b208b944b08ab554dc5e9f5505f'
       },
     ).then((value) {
       // print(value.data['articles'][0]['title']);
       business = value.data['articles'];
       print(business[0]['title']);
       emit(NewsGetBusinessSuccessState());
-    }).catchError((error){
+    }).catchError((error) {
       print(error.toString());
       emit(NewsGetBusinessErrorState(error.toString()));
     });
-
   }
 }
+
+List<dynamic> sports = [];
+
