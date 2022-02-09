@@ -82,3 +82,13 @@ class NewsCubit extends Cubit<NewsStates> {
 
 List<dynamic> sports = [];
 
+void getSports() {
+  DioHelper.getData(
+    url: 'v2/top-headlines',
+    query: {
+      'country': 'eg',
+      'category': 'sports',
+      'apiKey': 'ea0f2b208b944b08ab554dc5e9f5505f',
+    },
+  );
+}
