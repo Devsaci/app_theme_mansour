@@ -10,8 +10,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 class SportsScreen extends StatelessWidget {
   const SportsScreen({Key? key}) : super(key: key);
 
-
-
   @override
   Widget build(BuildContext context) {
     return BlocConsumer<NewsCubit, NewsStates>(
@@ -24,7 +22,7 @@ class SportsScreen extends StatelessWidget {
             physics: BouncingScrollPhysics(),
             itemBuilder: (context, index) => buildArticleItem(List[index]),
             separatorBuilder: (context, index) => myDivider(),
-            itemCount:10,
+            itemCount: 10,
           ),
           fallback: (BuildContext context) => Center(
             child: CircularProgressIndicator(),
