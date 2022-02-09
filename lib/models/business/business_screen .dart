@@ -30,7 +30,7 @@ class BusinessScreen extends StatelessWidget {
             child: CircularProgressIndicator(),
           ),
         );
-      }, //Error
+      },
     );
   }
 }
