@@ -91,6 +91,6 @@ void getSports() {
       'apiKey': 'ea0f2b208b944b08ab554dc5e9f5505f',
     },
   ).then((value) {
-
+    value.data['articles'];
   });
 }
