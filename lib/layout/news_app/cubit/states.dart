@@ -17,4 +17,10 @@ class NewsGetBusinessErrorState extends NewsStates {
 }
 class NewsGetSportsLoadingState extends NewsStates {}
 class NewsGetSportsSuccessState extends NewsStates {}
+class NewsGetSportsErrorState extends NewsStates
+{
+  final String error;
+
+  NewsGetSportsErrorState(this.error);
+}
 
