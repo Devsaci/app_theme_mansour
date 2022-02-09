@@ -54,7 +54,7 @@ class NewsCubit extends Cubit<NewsStates> {
 
   void changeBottomNavBar(int index) {
     currentIndex = index;
-    if(index == 1) {
+    if (index == 1) {
       getSports();
     }
     emit(NewsBottomNavState());
@@ -85,27 +85,25 @@ class NewsCubit extends Cubit<NewsStates> {
   List<dynamic> sports = [];
 
   void getSports() {
-    if(sports.length == 0){
-
-    }else{
-
-    }
-
     emit(NewsGetSportsLoadingState());
-    DioHelper.getData(
-      url: 'v2/top-headlines',
-      query: {
-        'country': 'eg',
-        'category': 'sports',
-        'apiKey': 'ea0f2b208b944b08ab554dc5e9f5505f',
-      },
-    ).then((value) {
-      sports = value.data['articles'];
-      print(sports[0]['title']);
-      emit(NewsGetSportsSuccessState());
-    }).catchError((error) {
-      print(error.toString());
-      emit(NewsGetSportsErrorState(error.toString()));
-    });
+    if (sports.length == 0) {
+      DioHelper.getData(
+        url: 'v2/top-headlines',
+        query: {
+          'country': 'eg',
+          'category': 'sports',
+          'apiKey': 'ea0f2b208b944b08ab554dc5e9f5505f',
+        },
+      ).then((value) {
+        sports = value.data['articles'];
+        print(sports[0]['title']);
+        emit(NewsGetSportsSuccessState());
+      }).catchError((error) {
+        print(error.toString());
+        emit(NewsGetSportsErrorState(error.toString()));
+      });
+    } else {}
+
+
   }
 }
