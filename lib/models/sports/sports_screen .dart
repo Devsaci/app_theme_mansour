@@ -15,7 +15,7 @@ class SportsScreen extends StatelessWidget {
     return BlocConsumer<NewsCubit, NewsStates>(
       listener: (BuildContext context, state) {},
       builder: (BuildContext context, Object? state) {
-        var List = NewsCubit.get(context).business;
+        var List = NewsCubit.get(context).sports;
         return ConditionalBuilder(
           condition: state is! NewsGetBusinessLoadingState,
           builder: (BuildContext context) => ListView.separated(
