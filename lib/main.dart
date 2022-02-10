@@ -5,6 +5,7 @@ import 'dart:ui';
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:hexcolor/hexcolor.dart';
 
 import 'layout/news_app/news_layout.dart';
 import 'shared/bloc_observer.dart';
@@ -64,7 +65,7 @@ class MyApp extends StatelessWidget {
         ),
       ),
       darkTheme: ThemeData(
-        scaffoldBackgroundColor: Colors.black45,
+        scaffoldBackgroundColor: HexColor('hexColor'),
       ),
       themeMode: ThemeMode.dark,
       home: NewsLayout(),
