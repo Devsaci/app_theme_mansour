@@ -25,3 +25,4 @@ class NewsGetSportsErrorState extends NewsStates {
 
   NewsGetSportsErrorState(this.error);
 }
+class kNewsGetScienceLoadingState extends NewsStates {}
