@@ -29,9 +29,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.deepOrange,
-        floatingActionButtonTheme: FloatingActionButtonThemeData(
-          backgroundColor: Colors.deepOrange
-        ),
+        floatingActionButtonTheme:
+            FloatingActionButtonThemeData(backgroundColor: Colors.deepOrange),
         scaffoldBackgroundColor: Colors.white,
         appBarTheme: AppBarTheme(
           elevation: 0.0,
@@ -67,7 +66,10 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: Colors.black45,
       ),
       themeMode: ThemeMode.light,
-      home: NewsLayout(),
+      home: Directionality(
+        textDirection: TextDirection.ltr,
+        child: NewsLayout(),
+      ),
     );
   }
 }
