@@ -42,7 +42,7 @@ Widget buildArticleItem(article) => Padding(
                   '${article['publishedAt']}',
                   style: TextStyle(
                     fontSize: 12,
-                    color: Colors.black,
+                    color: Colors.grey,
                   ),
                 ),
               ],
@@ -61,7 +61,7 @@ Widget myDivider() => Padding(
   child: Container(
     width: 200,
     height: 1.0,
-    color: Colors.black,
+    color: Colors.grey[300],
   ),
 );
 
