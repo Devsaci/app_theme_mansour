@@ -106,4 +106,8 @@ class NewsCubit extends Cubit<NewsStates> {
       emit(NewsGetSportsSuccessState());
     }
   }
+
+  List<dynamic> science = [];
+
+
 }
