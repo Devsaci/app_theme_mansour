@@ -57,6 +57,9 @@ class NewsCubit extends Cubit<NewsStates> {
     if (index == 1) {
       getSports();
     }
+    if (index == 2) {
+      getScience();
+    }
     emit(NewsBottomNavState());
   }
 
@@ -110,16 +113,26 @@ class NewsCubit extends Cubit<NewsStates> {
   List<dynamic> science = [];
 
   void getScience() {
-    DioHelper.getData(
-      url: 'v2/top-headlines',
-      query:
-      {
-        'country':'eg',
-        'category':'science',
-        'apiKey':'65f7f556ec76449fa7dc7c0069f040ca',
-      },
-    ).then((value) {
-      print(science[0]['title']);
-    });
+    emit(NewsGetScienceLoadingState());
+    if (science.length == 0) {
+      DioHelper.getData(
+        url: 'v2/top-headlines',
+        query: {
+          'country': 'eg',
+          'category': 'science',
+          'apiKey': 'ea0f2b208b944b08ab554dc5e9f5505f',
+        },
+      ).then((value) {
+        //print(value.data['articles'][0]['title']);
+        science = value.data['articles'];
+        print(science[0]['title']);
+        emit(NewsGetScienceSuccessState());
+      }).catchError((error) {
+        print(error.toString());
+        emit(NewsGetScienceErrorState(error.toString()));
+      });
+    } else {
+      emit(NewsGetScienceSuccessState());
+    }
   }
 }
