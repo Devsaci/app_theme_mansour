@@ -66,7 +66,7 @@ class MyApp extends StatelessWidget {
       darkTheme: ThemeData(
         scaffoldBackgroundColor: Colors.black45,
       ),
-      themeMode: ThemeMode.light,
+      themeMode: ThemeMode.dark,
       home: NewsLayout(),
     );
   }
