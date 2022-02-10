@@ -30,10 +30,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.deepOrange,
-        floatingActionButtonTheme: FloatingActionButtonThemeData(
-          backgroundColor: Colors.deepOrange,
-        ),
-        scaffoldBackgroundColor: Colors.white,
+        scaffoldBackgroundColor: HexColor('333739'),
         appBarTheme: AppBarTheme(
           elevation: 0.0,
           backwardsCompatibility: false,
@@ -52,6 +49,9 @@ class MyApp extends StatelessWidget {
             fontSize: 20.0,
             fontWeight: FontWeight.bold,
           ),
+        ),
+        floatingActionButtonTheme: FloatingActionButtonThemeData(
+          backgroundColor: Colors.deepOrange,
         ),
         bottomNavigationBarTheme: BottomNavigationBarThemeData(
           showSelectedLabels: true,
