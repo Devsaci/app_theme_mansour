@@ -37,19 +37,19 @@ class NewsCubit extends Cubit<NewsStates> {
       ),
       label: 'Science',
     ),
-    BottomNavigationBarItem(
-      icon: Icon(
-        Icons.settings,
-      ),
-      label: 'Settings',
-    ),
+    // BottomNavigationBarItem(
+    //   icon: Icon(
+    //     Icons.settings,
+    //   ),
+    //   label: 'Settings',
+    // ),
   ];
 
   List<Widget> screens = [
     BusinessScreen(),
     SportsScreen(),
     ScienceScreen(),
-    SettingsScreen(),
+    // SettingsScreen(),
   ];
 
   void changeBottomNavBar(int index) {

@@ -67,10 +67,7 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: Colors.black45,
       ),
       themeMode: ThemeMode.light,
-      home: Directionality(
-        textDirection: TextDirection.rtl,
-        child: NewsLayout(),
-      ),
+      home: NewsLayout(),
     );
   }
 }
