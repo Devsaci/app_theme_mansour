@@ -109,5 +109,10 @@ class NewsCubit extends Cubit<NewsStates> {
 
   List<dynamic> science = [];
 
-  void getScience() {}
+  void getScience() {
+    DioHelper.getData(
+      url: '',
+      query: {},
+    );
+  }
 }
