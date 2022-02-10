@@ -65,7 +65,7 @@ class MyApp extends StatelessWidget {
         ),
       ),
       darkTheme: ThemeData(
-        scaffoldBackgroundColor: HexColor('hexColor'),
+        scaffoldBackgroundColor: HexColor('333739'),
       ),
       themeMode: ThemeMode.dark,
       home: NewsLayout(),
