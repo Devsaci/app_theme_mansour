@@ -63,6 +63,13 @@ class MyApp extends StatelessWidget {
             size: 40.0,
           ),
         ),
+        textTheme:TextTheme(
+          bodyText1: TextStyle(
+            fontSize: 18,
+            fontWeight: FontWeight.w600,
+            color: Colors.black,
+          ),
+        ),
       ),
       darkTheme: ThemeData(
         primarySwatch: Colors.deepOrange,
