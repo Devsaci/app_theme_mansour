@@ -54,12 +54,12 @@ class NewsCubit extends Cubit<NewsStates> {
 
   void changeBottomNavBar(int index) {
     currentIndex = index;
-    if (index == 1) {
-      getSports();
-    }
-    if (index == 2) {
-      getScience();
-    }
+    // if (index == 1) {
+    //   getSports();
+    // }
+    // if (index == 2) {
+    //   getScience();
+    // }
     emit(NewsBottomNavState());
   }
 
@@ -77,7 +77,7 @@ class NewsCubit extends Cubit<NewsStates> {
     ).then((value) {
       // print(value.data['articles'][0]['title']);
       business = value.data['articles'];
-      print(business[0]['title']);
+      print(business[1]['title']);
       emit(NewsGetBusinessSuccessState());
     }).catchError((error) {
       print(error.toString());
@@ -99,7 +99,7 @@ class NewsCubit extends Cubit<NewsStates> {
         },
       ).then((value) {
         sports = value.data['articles'];
-        print(sports[0]['title']);
+        print(sports[1]['title']);
         emit(NewsGetSportsSuccessState());
       }).catchError((error) {
         print(error.toString());
@@ -125,7 +125,7 @@ class NewsCubit extends Cubit<NewsStates> {
       ).then((value) {
         //print(value.data['articles'][0]['title']);
         science = value.data['articles'];
-        print(science[0]['title']);
+        print(science[1]['title']);
         emit(NewsGetScienceSuccessState());
       }).catchError((error) {
         print(error.toString());
