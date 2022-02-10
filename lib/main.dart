@@ -70,10 +70,10 @@ class MyApp extends StatelessWidget {
         appBarTheme: AppBarTheme(
           backwardsCompatibility: false,
           systemOverlayStyle: SystemUiOverlayStyle(
-            statusBarColor: Colors.white,
+            statusBarColor: HexColor('333739'),
             statusBarIconBrightness: Brightness.dark,
           ),
-          backgroundColor: Colors.white,
+          backgroundColor: HexColor('333739'),
           elevation: 0.0,
           titleTextStyle: TextStyle(
             letterSpacing: 10.0,
