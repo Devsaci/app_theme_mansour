@@ -100,6 +100,13 @@ class MyApp extends StatelessWidget {
           elevation: 20.0,
           backgroundColor: HexColor('333739'),
         ),
+        textTheme:TextTheme(
+          bodyText1: TextStyle(
+            fontSize: 18,
+            fontWeight: FontWeight.w600,
+            color: Colors.white,
+          ),
+        ),
       ),
       themeMode: ThemeMode.dark,
       home: NewsLayout(),
