@@ -31,17 +31,18 @@ Widget buildArticleItem(article) => Padding(
                   child: Text(
                     '${article['title']}',
                     style: TextStyle(
-                      fontSize: 18.0,
+                      fontSize: 15.0,
                       fontWeight: FontWeight.w600,
                     ),
-                    maxLines: 4,
+                    maxLines: 3,
                     overflow: TextOverflow.ellipsis,
                   ),
                 ),
                 Text(
                   '${article['publishedAt']}',
                   style: TextStyle(
-                    color: Colors.grey,
+                    fontSize: 12,
+                    color: Colors.black,
                   ),
                 ),
               ],
