@@ -71,7 +71,7 @@ class MyApp extends StatelessWidget {
           backwardsCompatibility: false,
           systemOverlayStyle: SystemUiOverlayStyle(
             statusBarColor: HexColor('333739'),
-            statusBarIconBrightness: Brightness.dark,
+            statusBarIconBrightness: Brightness.light,
           ),
           backgroundColor: HexColor('333739'),
           elevation: 0.0,
