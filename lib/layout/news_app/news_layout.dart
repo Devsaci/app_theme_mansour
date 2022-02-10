@@ -28,7 +28,13 @@ class NewsLayout extends StatelessWidget {
                     Icons.search,
                   ),
                   onPressed: () {},
-                )
+                ),
+                IconButton(
+                  onPressed: () {},
+                  icon: Icon(
+                    Icons.brightness_4_outlined,
+                  ),
+                ),
               ],
               title: Text(
                 'News App',
