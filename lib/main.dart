@@ -77,7 +77,7 @@ class MyApp extends StatelessWidget {
           elevation: 0.0,
           titleTextStyle: TextStyle(
             letterSpacing: 10.0,
-            color: Colors.black,
+            color: Colors.white,
             fontSize: 20.0,
             fontWeight: FontWeight.bold,
           ),
