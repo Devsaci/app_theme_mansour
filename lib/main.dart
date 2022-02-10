@@ -67,7 +67,7 @@ class MyApp extends StatelessWidget {
       ),
       themeMode: ThemeMode.light,
       home: Directionality(
-        textDirection: TextDirection.ltr,
+        textDirection: TextDirection.rtl,
         child: NewsLayout(),
       ),
     );
