@@ -32,22 +32,22 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.deepOrange,
         scaffoldBackgroundColor: HexColor('333739'),
         appBarTheme: AppBarTheme(
-          elevation: 0.0,
           backwardsCompatibility: false,
           systemOverlayStyle: SystemUiOverlayStyle(
             statusBarColor: Colors.white,
             statusBarIconBrightness: Brightness.dark,
           ),
           backgroundColor: Colors.white,
-          iconTheme: IconThemeData(
-            color: Colors.black,
-            size: 40,
-          ),
+          elevation: 0.0,
           titleTextStyle: TextStyle(
             letterSpacing: 10.0,
             color: Colors.black,
             fontSize: 20.0,
             fontWeight: FontWeight.bold,
+          ),
+          iconTheme: IconThemeData(
+            color: Colors.black,
+            size: 40,
           ),
         ),
         floatingActionButtonTheme: FloatingActionButtonThemeData(
@@ -65,7 +65,40 @@ class MyApp extends StatelessWidget {
         ),
       ),
       darkTheme: ThemeData(
+        primarySwatch: Colors.deepOrange,
         scaffoldBackgroundColor: HexColor('333739'),
+        appBarTheme: AppBarTheme(
+          backwardsCompatibility: false,
+          systemOverlayStyle: SystemUiOverlayStyle(
+            statusBarColor: Colors.white,
+            statusBarIconBrightness: Brightness.dark,
+          ),
+          backgroundColor: Colors.white,
+          elevation: 0.0,
+          titleTextStyle: TextStyle(
+            letterSpacing: 10.0,
+            color: Colors.black,
+            fontSize: 20.0,
+            fontWeight: FontWeight.bold,
+          ),
+          iconTheme: IconThemeData(
+            color: Colors.black,
+            size: 40,
+          ),
+        ),
+        floatingActionButtonTheme: FloatingActionButtonThemeData(
+          backgroundColor: Colors.deepOrange,
+        ),
+        bottomNavigationBarTheme: BottomNavigationBarThemeData(
+          showSelectedLabels: true,
+          type: BottomNavigationBarType.fixed,
+          selectedItemColor: Colors.deepOrange,
+          elevation: 50.0,
+          backgroundColor: Colors.grey[200],
+          selectedIconTheme: IconThemeData(
+            size: 40.0,
+          ),
+        ),
       ),
       themeMode: ThemeMode.dark,
       home: NewsLayout(),
