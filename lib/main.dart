@@ -82,7 +82,7 @@ class MyApp extends StatelessWidget {
             fontWeight: FontWeight.bold,
           ),
           iconTheme: IconThemeData(
-            color: Colors.black,
+            color: Colors.white,
             size: 40,
           ),
         ),
