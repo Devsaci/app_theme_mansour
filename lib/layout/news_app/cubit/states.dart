@@ -25,4 +25,14 @@ class NewsGetSportsErrorState extends NewsStates {
 
   NewsGetSportsErrorState(this.error);
 }
-class kNewsGetScienceLoadingState extends NewsStates {}
+class NewsGetScienceLoadingState extends NewsStates {}
+
+class NewsGetScienceSuccessState extends NewsStates {}
+
+class NewsGetScienceErrorState extends NewsStates
+{
+  final String error;
+
+  NewsGetScienceErrorState(this.error);
+}
+
