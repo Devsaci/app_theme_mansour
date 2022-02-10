@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
+import 'package:conditional_builder_null_safety/conditional_builder_null_safety.dart';
 import 'package:flutter/material.dart';
 
 Widget buildArticleItem(article) => Padding(
@@ -60,5 +61,18 @@ Widget myDivider() => Padding(
     width: 200,
     height: 1.0,
     color: Colors.black,
+  ),
+);
+
+Widget articleBuilder(list) => ConditionalBuilder(
+  condition: list.length > 0,
+  builder: (BuildContext context) => ListView.separated(
+    physics: BouncingScrollPhysics(),
+    itemBuilder: (context, index) => buildArticleItem(list[index]),
+    separatorBuilder: (context, index) => myDivider(),
+    itemCount: 10,
+  ),
+  fallback: (BuildContext context) => Center(
+    child: CircularProgressIndicator(),
   ),
 );
