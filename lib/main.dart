@@ -83,7 +83,7 @@ class MyApp extends StatelessWidget {
           backgroundColor: HexColor('333739'),
           elevation: 0.0,
           titleTextStyle: TextStyle(
-            letterSpacing: 10.0,
+            letterSpacing: 5.0,
             color: Colors.white,
             fontSize: 20.0,
             fontWeight: FontWeight.bold,
@@ -100,12 +100,12 @@ class MyApp extends StatelessWidget {
           showSelectedLabels: true,
           type: BottomNavigationBarType.fixed,
           selectedItemColor: Colors.deepOrange,
-          selectedIconTheme: IconThemeData(
-            size: 40.0,
-          ),
           unselectedItemColor: Colors.grey,
           elevation: 20.0,
           backgroundColor: HexColor('333739'),
+          selectedIconTheme: IconThemeData(
+            size: 40.0,
+          ),
         ),
         textTheme:TextTheme(
           bodyText1: TextStyle(
