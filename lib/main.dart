@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.deepOrange,
-        scaffoldBackgroundColor: HexColor('333739'),
+        scaffoldBackgroundColor:  Colors.white,
         appBarTheme: AppBarTheme(
           backwardsCompatibility: false,
           systemOverlayStyle: SystemUiOverlayStyle(
@@ -115,7 +115,7 @@ class MyApp extends StatelessWidget {
           ),
         ),
       ),
-      themeMode: ThemeMode.dark,
+      themeMode: ThemeMode.light,
       home: NewsLayout(),
     );
   }
