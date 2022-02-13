@@ -17,6 +17,7 @@ class NewsLayout extends StatelessWidget {
         ..getSports()
         ..getScience(),
       child: BlocConsumer<NewsCubit, NewsStates>(
+        listener: (context, state) {},
         builder: (context, state) {
           var cubit = NewsCubit.get(context);
           return Scaffold(
@@ -30,7 +31,9 @@ class NewsLayout extends StatelessWidget {
                   onPressed: () {},
                 ),
                 IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    NewsCubit.get(context).changeAppMode();
+                  },
                   icon: Icon(
                     Icons.brightness_4_outlined,
                   ),
@@ -54,7 +57,7 @@ class NewsLayout extends StatelessWidget {
                 items: cubit.bottomItems),
           );
         },
-        listener: (context, state) {},
+
       ),
     );
   }
