@@ -3,6 +3,7 @@
 import 'dart:ui';
 
 import 'package:app_theme_mansour/layout/news_app/cubit/cubit.dart';
+import 'package:app_theme_mansour/layout/news_app/cubit/states.dart';
 import 'package:app_theme_mansour/shared/components/components.dart';
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
@@ -31,97 +32,102 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (BuildContext context) => NewsCubit(),
-      child: MaterialApp(
-        debugShowCheckedModeBanner: false,
-        theme: ThemeData(
-          primarySwatch: Colors.deepOrange,
-          scaffoldBackgroundColor:  Colors.white,
-          appBarTheme: AppBarTheme(
-            backwardsCompatibility: false,
-            systemOverlayStyle: SystemUiOverlayStyle(
-              statusBarColor: Colors.white,
-              statusBarIconBrightness: Brightness.dark,
+      child: BlocConsumer<NewsCubit, NewsStates>(
+        listener: (BuildContext context, state) {},
+        builder: (BuildContext context, state) {
+          return MaterialApp(
+            debugShowCheckedModeBanner: false,
+            theme: ThemeData(
+              primarySwatch: Colors.deepOrange,
+              scaffoldBackgroundColor: Colors.white,
+              appBarTheme: AppBarTheme(
+                backwardsCompatibility: false,
+                systemOverlayStyle: SystemUiOverlayStyle(
+                  statusBarColor: Colors.white,
+                  statusBarIconBrightness: Brightness.dark,
+                ),
+                backgroundColor: Colors.white,
+                elevation: 0.0,
+                titleTextStyle: TextStyle(
+                  letterSpacing: 10.0,
+                  color: Colors.black,
+                  fontSize: 20.0,
+                  fontWeight: FontWeight.bold,
+                ),
+                iconTheme: IconThemeData(
+                  color: Colors.black,
+                  size: 40,
+                ),
+              ),
+              floatingActionButtonTheme: FloatingActionButtonThemeData(
+                backgroundColor: Colors.deepOrange,
+              ),
+              bottomNavigationBarTheme: BottomNavigationBarThemeData(
+                showSelectedLabels: true,
+                type: BottomNavigationBarType.fixed,
+                selectedItemColor: Colors.deepOrange,
+                elevation: 50.0,
+                backgroundColor: Colors.grey[200],
+                selectedIconTheme: IconThemeData(
+                  size: 40.0,
+                ),
+              ),
+              textTheme: TextTheme(
+                bodyText1: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.w600,
+                  color: Colors.black,
+                ),
+              ),
             ),
-            backgroundColor: Colors.white,
-            elevation: 0.0,
-            titleTextStyle: TextStyle(
-              letterSpacing: 10.0,
-              color: Colors.black,
-              fontSize: 20.0,
-              fontWeight: FontWeight.bold,
+            darkTheme: ThemeData(
+              primarySwatch: Colors.deepOrange,
+              scaffoldBackgroundColor: HexColor('333739'),
+              appBarTheme: AppBarTheme(
+                backwardsCompatibility: false,
+                systemOverlayStyle: SystemUiOverlayStyle(
+                  statusBarColor: HexColor('333739'),
+                  statusBarIconBrightness: Brightness.light,
+                ),
+                backgroundColor: HexColor('333739'),
+                elevation: 0.0,
+                titleTextStyle: TextStyle(
+                  letterSpacing: 5.0,
+                  color: Colors.white,
+                  fontSize: 20.0,
+                  fontWeight: FontWeight.bold,
+                ),
+                iconTheme: IconThemeData(
+                  color: Colors.white,
+                  size: 40,
+                ),
+              ),
+              floatingActionButtonTheme: FloatingActionButtonThemeData(
+                backgroundColor: Colors.deepOrange,
+              ),
+              bottomNavigationBarTheme: BottomNavigationBarThemeData(
+                showSelectedLabels: true,
+                type: BottomNavigationBarType.fixed,
+                selectedItemColor: Colors.deepOrange,
+                unselectedItemColor: Colors.grey,
+                elevation: 20.0,
+                backgroundColor: HexColor('333739'),
+                selectedIconTheme: IconThemeData(
+                  size: 40.0,
+                ),
+              ),
+              textTheme: TextTheme(
+                bodyText1: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.w600,
+                  color: Colors.white,
+                ),
+              ),
             ),
-            iconTheme: IconThemeData(
-              color: Colors.black,
-              size: 40,
-            ),
-          ),
-          floatingActionButtonTheme: FloatingActionButtonThemeData(
-            backgroundColor: Colors.deepOrange,
-          ),
-          bottomNavigationBarTheme: BottomNavigationBarThemeData(
-            showSelectedLabels: true,
-            type: BottomNavigationBarType.fixed,
-            selectedItemColor: Colors.deepOrange,
-            elevation: 50.0,
-            backgroundColor: Colors.grey[200],
-            selectedIconTheme: IconThemeData(
-              size: 40.0,
-            ),
-          ),
-          textTheme:TextTheme(
-            bodyText1: TextStyle(
-              fontSize: 18,
-              fontWeight: FontWeight.w600,
-              color: Colors.black,
-            ),
-          ),
-        ),
-        darkTheme: ThemeData(
-          primarySwatch: Colors.deepOrange,
-          scaffoldBackgroundColor: HexColor('333739'),
-          appBarTheme: AppBarTheme(
-            backwardsCompatibility: false,
-            systemOverlayStyle: SystemUiOverlayStyle(
-              statusBarColor: HexColor('333739'),
-              statusBarIconBrightness: Brightness.light,
-            ),
-            backgroundColor: HexColor('333739'),
-            elevation: 0.0,
-            titleTextStyle: TextStyle(
-              letterSpacing: 5.0,
-              color: Colors.white,
-              fontSize: 20.0,
-              fontWeight: FontWeight.bold,
-            ),
-            iconTheme: IconThemeData(
-              color: Colors.white,
-              size: 40,
-            ),
-          ),
-          floatingActionButtonTheme: FloatingActionButtonThemeData(
-            backgroundColor: Colors.deepOrange,
-          ),
-          bottomNavigationBarTheme: BottomNavigationBarThemeData(
-            showSelectedLabels: true,
-            type: BottomNavigationBarType.fixed,
-            selectedItemColor: Colors.deepOrange,
-            unselectedItemColor: Colors.grey,
-            elevation: 20.0,
-            backgroundColor: HexColor('333739'),
-            selectedIconTheme: IconThemeData(
-              size: 40.0,
-            ),
-          ),
-          textTheme:TextTheme(
-            bodyText1: TextStyle(
-              fontSize: 18,
-              fontWeight: FontWeight.w600,
-              color: Colors.white,
-            ),
-          ),
-        ),
-        themeMode: ThemeMode.dark,
-        home: NewsLayout(),
+            themeMode: ThemeMode.dark,
+            home: NewsLayout(),
+          );
+        },
       ),
     );
   }
