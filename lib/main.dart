@@ -44,6 +44,7 @@ class MyApp extends StatelessWidget {
               primarySwatch: Colors.deepOrange,
               scaffoldBackgroundColor: Colors.white,
               appBarTheme: AppBarTheme(
+                titleSpacing: 20.0,
                 backwardsCompatibility: false,
                 systemOverlayStyle: SystemUiOverlayStyle(
                   statusBarColor: Colors.white,
@@ -87,6 +88,7 @@ class MyApp extends StatelessWidget {
               primarySwatch: Colors.deepOrange,
               scaffoldBackgroundColor: HexColor('333739'),
               appBarTheme: AppBarTheme(
+                titleSpacing: 20.0,
                 backwardsCompatibility: false,
                 systemOverlayStyle: SystemUiOverlayStyle(
                   statusBarColor: HexColor('333739'),
@@ -95,7 +97,7 @@ class MyApp extends StatelessWidget {
                 backgroundColor: HexColor('333739'),
                 elevation: 0.0,
                 titleTextStyle: TextStyle(
-                  letterSpacing: 5.0,
+                  letterSpacing: 10.0,
                   color: Colors.white,
                   fontSize: 20.0,
                   fontWeight: FontWeight.bold,
@@ -127,7 +129,9 @@ class MyApp extends StatelessWidget {
                 ),
               ),
             ),
-            themeMode: NewsCubit.get(context).isDark ? ThemeMode.dark: ThemeMode.light,
+            themeMode: NewsCubit.get(context).isDark
+                ? ThemeMode.dark
+                : ThemeMode.light,
             home: NewsLayout(),
           );
         },
