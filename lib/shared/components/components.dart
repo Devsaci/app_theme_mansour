@@ -9,7 +9,7 @@ Widget buildArticleItem(article, context) => Padding(
         children: [
           Container(
             width: 120.0,
-            height: 120.0,
+            height: 150.0,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10.0),
               image: DecorationImage(
@@ -21,7 +21,7 @@ Widget buildArticleItem(article, context) => Padding(
           SizedBox(width: 20.0),
           Expanded(
             child: Container(
-              height: 120.0,
+              height: 150.0,
               child: Column(
                 // mainAxisSize: MainAxisSize.min,
                 crossAxisAlignment: CrossAxisAlignment.start,

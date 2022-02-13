@@ -2,6 +2,7 @@
 
 import 'dart:ui';
 
+import 'package:app_theme_mansour/shared/components/components.dart';
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -115,7 +116,7 @@ class MyApp extends StatelessWidget {
           ),
         ),
       ),
-      themeMode: ThemeMode.light,
+      themeMode: ThemeMode.dark,
       home: NewsLayout(),
     );
   }
