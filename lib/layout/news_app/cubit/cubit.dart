@@ -141,6 +141,6 @@ class NewsCubit extends Cubit<NewsStates> {
 
   void changeAppMode() {
     isDark = !isDark;
-    emit(state);
+    emit(NewsChangeModeState());
   }
 }
