@@ -135,4 +135,7 @@ class NewsCubit extends Cubit<NewsStates> {
       emit(NewsGetScienceSuccessState());
     }
   }
+
+
+  ThemeMode appMode = ThemeMode.dark;
 }
