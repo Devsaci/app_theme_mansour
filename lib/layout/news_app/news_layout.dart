@@ -11,54 +11,48 @@ class NewsLayout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (BuildContext context) => NewsCubit()
-        ..getBusiness()
-        ..getSports()
-        ..getScience(),
-      child: BlocConsumer<NewsCubit, NewsStates>(
-        listener: (context, state) {},
-        builder: (context, state) {
-          var cubit = NewsCubit.get(context);
-          return Scaffold(
-            appBar: AppBar(
-              // centerTitle: true,
-              actions: [
-                IconButton(
-                  icon: Icon(
-                    Icons.search,
-                  ),
-                  onPressed: () {},
+    return BlocConsumer<NewsCubit, NewsStates>(
+      listener: (context, state) {},
+      builder: (context, state) {
+        var cubit = NewsCubit.get(context);
+        return Scaffold(
+          appBar: AppBar(
+            // centerTitle: true,
+            actions: [
+              IconButton(
+                icon: Icon(
+                  Icons.search,
                 ),
-                IconButton(
-                  onPressed: () {
-                    NewsCubit.get(context).changeAppMode();
-                  },
-                  icon: Icon(
-                    Icons.brightness_4_outlined,
-                  ),
-                ),
-              ],
-              title: Text(
-                'News App',
+                onPressed: () {},
               ),
-            ),
-            // floatingActionButton: FloatingActionButton(
-            //   onPressed: () {
-            //     },
-            //   child: Icon(Icons.add_a_photo),
-            // ),
-            body: cubit.screens[cubit.currentIndex],
-            bottomNavigationBar: BottomNavigationBar(
-                currentIndex: cubit.currentIndex,
-                onTap: (index) {
-                  cubit.changeBottomNavBar(index);
+              IconButton(
+                onPressed: () {
+                  NewsCubit.get(context).changeAppMode();
                 },
-                items: cubit.bottomItems),
-          );
-        },
+                icon: Icon(
+                  Icons.brightness_4_outlined,
+                ),
+              ),
+            ],
+            title: Text(
+              'News App',
+            ),
+          ),
+          // floatingActionButton: FloatingActionButton(
+          //   onPressed: () {
+          //     },
+          //   child: Icon(Icons.add_a_photo),
+          // ),
+          body: cubit.screens[cubit.currentIndex],
+          bottomNavigationBar: BottomNavigationBar(
+              currentIndex: cubit.currentIndex,
+              onTap: (index) {
+                cubit.changeBottomNavBar(index);
+              },
+              items: cubit.bottomItems),
+        );
+      },
 
-      ),
     );
   }
 }
