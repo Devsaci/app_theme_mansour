@@ -6,4 +6,8 @@ class CacheHelper {
   static init() async{
     sharedPreferences = await SharedPreferences.getInstance();
   }
+
+  void putData(){
+
+  }
 }
