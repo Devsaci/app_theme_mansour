@@ -31,9 +31,9 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-   final bool isDark;
-  MyApp(this.isDark);
+  final bool isDark;
 
+  MyApp(this.isDark);
 
   @override
   Widget build(BuildContext context) {
@@ -41,7 +41,8 @@ class MyApp extends StatelessWidget {
       create: (BuildContext context) => NewsCubit()
         ..getBusiness()
         ..getSports()
-        ..getScience(),
+        ..getScience()
+        ..changeAppMode(),
       child: BlocConsumer<NewsCubit, NewsStates>(
         listener: (BuildContext context, state) {},
         builder: (BuildContext context, state) {
