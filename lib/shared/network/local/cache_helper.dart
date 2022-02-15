@@ -7,10 +7,10 @@ class CacheHelper {
     sharedPreferences = await SharedPreferences.getInstance();
   }
 
-  void putBoolean({
+  Future<bool?> putBoolean({
     required String key,
     required bool value,
-  }) {
-    sharedPreferences?.setBool('isDark', value);
+  }) async {
+    return await sharedPreferences?.setBool('isDark', value);
   }
 }
