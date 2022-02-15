@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, prefer_const_constructors_in_immutables
 
 import 'dart:ui';
 
@@ -7,6 +7,7 @@ import 'package:app_theme_mansour/layout/news_app/cubit/states.dart';
 import 'package:app_theme_mansour/shared/components/components.dart';
 import 'package:app_theme_mansour/shared/network/local/cache_helper.dart';
 import 'package:bloc/bloc.dart';
+import 'package:conditional_builder_null_safety/example/example.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -18,23 +19,28 @@ import 'shared/network/remote/dio_helper.dart';
 
 void main() {
   BlocOverrides.runZoned(
-    () async {
+        () async {
       WidgetsFlutterBinding.ensureInitialized();
       DioHelper.init();
       await CacheHelper.init();
-      runApp(MyApp());
+      bool? isDark = CacheHelper.getBoolean(key: 'isDark');
+      runApp(MyAp)p(isDark!);
     },
     blocObserver: MyBlocObserver(),
   );
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  final bool isDark;
+
+  MyApp(this.isDark, {Key? key}) : super(key: key);
+
 
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (BuildContext context) => NewsCubit()
+      create: (BuildContext context) =>
+      NewsCubit()
         ..getBusiness()
         ..getSports()
         ..getScience(),
@@ -132,7 +138,9 @@ class MyApp extends StatelessWidget {
                 ),
               ),
             ),
-            themeMode: NewsCubit.get(context).isDark
+            themeMode: NewsCubit
+                .get(context)
+                .isDark
                 ? ThemeMode.dark
                 : ThemeMode.light,
             home: NewsLayout(),
