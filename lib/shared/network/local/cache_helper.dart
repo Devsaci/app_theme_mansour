@@ -15,6 +15,6 @@ class CacheHelper {
   }
 
   static bool? getBoolean({required String key}) {
-    return null;
+    return sharedPreferences?.getBool(key);
   }
 }
