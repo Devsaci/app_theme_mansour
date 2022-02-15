@@ -13,4 +13,8 @@ class CacheHelper {
   }) async {
     return await sharedPreferences?.setBool('isDark', value);
   }
+
+  static bool? getBoolean({required String key}) {
+    return null;
+  }
 }
