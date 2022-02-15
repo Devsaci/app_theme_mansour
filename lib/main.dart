@@ -19,28 +19,26 @@ import 'shared/network/remote/dio_helper.dart';
 
 void main() {
   BlocOverrides.runZoned(
-        () async {
+    () async {
       WidgetsFlutterBinding.ensureInitialized();
       DioHelper.init();
       await CacheHelper.init();
       bool? isDark = CacheHelper.getBoolean(key: 'isDark');
-      runApp(MyAp)p(isDark!);
+      runApp(MyApp(isDark!));
     },
     blocObserver: MyBlocObserver(),
   );
 }
 
 class MyApp extends StatelessWidget {
-  final bool isDark;
-
-  MyApp(this.isDark, {Key? key}) : super(key: key);
+   final bool isDark;
+  MyApp(this.isDark);
 
 
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (BuildContext context) =>
-      NewsCubit()
+      create: (BuildContext context) => NewsCubit()
         ..getBusiness()
         ..getSports()
         ..getScience(),
@@ -138,9 +136,7 @@ class MyApp extends StatelessWidget {
                 ),
               ),
             ),
-            themeMode: NewsCubit
-                .get(context)
-                .isDark
+            themeMode: NewsCubit.get(context).isDark
                 ? ThemeMode.dark
                 : ThemeMode.light,
             home: NewsLayout(),
