@@ -3,7 +3,9 @@ import 'package:shared_preferences/shared_preferences.dart';
 class CacheHelper {
   static SharedPreferences? sharedPreferences;
 
-  static init() async {
+  static init() async  // [ERROR:flutter/lib/ui/ui_dart_state.cc(209)]
+  // Unhandled Exception: Null check operator used on a null value
+  {
     sharedPreferences = await SharedPreferences.getInstance();
   }
 
