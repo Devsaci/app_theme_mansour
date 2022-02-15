@@ -142,9 +142,11 @@ class NewsCubit extends Cubit<NewsStates> {
 
   void changeAppMode() {
     isDark = !isDark;
-    CacheHelper.putBoolean(key: 'isDark', value: isDark).then((value) {
-
+    CacheHelper.putBoolean(
+      key: 'isDark',
+      value: isDark,
+    ).then((value) {
+      emit(NewsChangeModeState());
     });
-    emit(NewsChangeModeState());
   }
 }
