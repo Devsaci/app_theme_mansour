@@ -5,6 +5,7 @@ import 'dart:ui';
 import 'package:app_theme_mansour/layout/news_app/cubit/cubit.dart';
 import 'package:app_theme_mansour/layout/news_app/cubit/states.dart';
 import 'package:app_theme_mansour/shared/components/components.dart';
+import 'package:app_theme_mansour/shared/network/local/cache_helper.dart';
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -19,6 +20,7 @@ void main() {
   BlocOverrides.runZoned(
     () {
       DioHelper.init();
+      CacheHelper.init();
       runApp(MyApp());
     },
     blocObserver: MyBlocObserver(),
