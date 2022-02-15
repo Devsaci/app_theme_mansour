@@ -18,9 +18,10 @@ import 'shared/network/remote/dio_helper.dart';
 
 void main() {
   BlocOverrides.runZoned(
-    () {
+    () async {
+      WidgetsFlutterBinding.ensureInitialized();
       DioHelper.init();
-      CacheHelper.init();
+      await CacheHelper.init();
       runApp(MyApp());
     },
     blocObserver: MyBlocObserver(),
