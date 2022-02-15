@@ -42,7 +42,7 @@ class MyApp extends StatelessWidget {
         ..getBusiness()
         ..getSports()
         ..getScience()
-        ..changeAppMode(),
+        ..changeAppMode(fromShared: isDark),
       child: BlocConsumer<NewsCubit, NewsStates>(
         listener: (BuildContext context, state) {},
         builder: (BuildContext context, state) {
