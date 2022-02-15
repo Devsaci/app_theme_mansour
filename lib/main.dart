@@ -24,7 +24,7 @@ void main() {
       DioHelper.init();
       await CacheHelper.init();
       bool? isDark = CacheHelper.getBoolean(key: 'isDark');
-      runApp(MyApp(isDark!));
+      runApp(MyApp(isDark!)); // [ERROR:flutter/lib/ui/ui_dart_state.cc(209)] Unhandled Exception: Null check operator used on a null value
     },
     blocObserver: MyBlocObserver(),
   );
