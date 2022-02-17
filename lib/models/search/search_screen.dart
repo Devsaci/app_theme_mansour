@@ -31,7 +31,9 @@ class SearchScreen extends StatelessWidget {
                   child: defaultFormField(
                     controller: searchController,
                     type: TextInputType.text,
-                    onChange: (value) {},
+                    onChange: (value) {
+                      NewsCubit.get(context).getSearch(value);
+                    },
                     validate: (String value) {
                       if (value.isEmpty) {
                         return 'search must not be empty';
