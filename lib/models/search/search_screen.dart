@@ -12,7 +12,10 @@ class SearchScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Search',style: TextStyle(letterSpacing: 10),),
+        title: Text(
+          'Search',
+          style: TextStyle(letterSpacing: 10),
+        ),
       ),
       body: Column(
         children: [
@@ -21,9 +24,7 @@ class SearchScreen extends StatelessWidget {
             child: defaultFormField(
               controller: searchController,
               type: TextInputType.text,
-              onChange: (value){
-
-              },
+              onChange: (value) {},
               validate: (String value) {
                 if (value.isEmpty) {
                   return 'search must not be empty';
@@ -33,6 +34,9 @@ class SearchScreen extends StatelessWidget {
               label: 'Search',
               prefix: Icons.search,
             ),
+          ),
+          Expanded(
+            child: articleBuilder(list, context),//Error in list Create getter 'list'
           )
         ],
       ),
