@@ -139,6 +139,22 @@ class NewsCubit extends Cubit<NewsStates> {
 
   List<dynamic> search = [];
 
+  void getSearch(String value) {
+    DioHelper.getData(
+      url: 'v2/everything',
+      query: {
+        'q': value,
+        'apiKey': '65f7f556ec76449fa7dc7c0069f040ca',
+      },
+    ).then((value) {
+      //print(value.data['articles'][0]['title']);
+      search = value.data['articles'];
+      print(search[0]['title']);
+    }).catchError((error) {
+      print(error.toString());
+    });
+  }
+
   // ThemeMode appMode = ThemeMode.dark;
   bool isDark = false;
 
