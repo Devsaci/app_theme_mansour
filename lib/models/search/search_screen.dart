@@ -16,17 +16,20 @@ class SearchScreen extends StatelessWidget {
       ),
       body: Column(
         children: [
-          defaultFormField(
-            controller: searchController,
-            type: TextInputType.text,
-            validate: (String value) {
-              if (value.isEmpty) {
-                return 'search must not be empty';
-              }
-              return null;
-            },
-            label: 'Search',
-            prefix: Icons.search,
+          Padding(
+            padding: const EdgeInsets.all(20.0),
+            child: defaultFormField(
+              controller: searchController,
+              type: TextInputType.text,
+              validate: (String value) {
+                if (value.isEmpty) {
+                  return 'search must not be empty';
+                }
+                return null;
+              },
+              label: 'Search',
+              prefix: Icons.search,
+            ),
           )
         ],
       ),
