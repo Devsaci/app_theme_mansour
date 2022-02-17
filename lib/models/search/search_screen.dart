@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:app_theme_mansour/shared/components/components.dart';
 import 'package:flutter/material.dart';
 
@@ -9,20 +11,20 @@ class SearchScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        title: Text('Search',style: TextStyle(letterSpacing: 10),),
+      ),
       body: Column(
         children: [
           defaultFormField(
             controller: searchController,
             type: TextInputType.text,
-            validate: (String value)
-            {
-              if(value.isEmpty)
-              {
+            validate: (String value) {
+              if (value.isEmpty) {
                 return 'search must not be empty';
               }
               return null;
-            },,
+            },
             label: 'Search',
             prefix: Icons.search,
           )
