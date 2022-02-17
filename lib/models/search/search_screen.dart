@@ -1,3 +1,4 @@
+import 'package:app_theme_mansour/shared/components/components.dart';
 import 'package:flutter/material.dart';
 
 class SearchScreen extends StatelessWidget {
@@ -5,6 +6,13 @@ class SearchScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(),
+      body: Column(
+        children: [
+
+        ],
+      ),
+    );
   }
 }
