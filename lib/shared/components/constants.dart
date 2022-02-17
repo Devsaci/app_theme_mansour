@@ -6,4 +6,5 @@
 
 // base url : https://newsapi.org/
 // method (url) : v2/top-headlines?
-// queries : country=eg&category=business&apiKey=65f7f556ec76449fa7dc7c0069f040ca
+// queries : country=eg&category=business&apiKey=ea0f2b208b944b08ab554dc5e9f5505f
+// https://newsapi.org/v2/everything?q=tesla&apiKey=ea0f2b208b944b08ab554dc5e9f5505f
