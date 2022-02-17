@@ -140,7 +140,7 @@ class NewsCubit extends Cubit<NewsStates> {
   // ThemeMode appMode = ThemeMode.dark;
   bool isDark = false;
 
-  void changeAppMode({bool? fromShared}) {
+  void changeAppMode({bool fromShared}) {
     if (fromShared != null) {
       isDark = fromShared;
       emit(NewsChangeModeState());

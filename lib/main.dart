@@ -23,8 +23,8 @@ void main() {
       WidgetsFlutterBinding.ensureInitialized();
       DioHelper.init();
       await CacheHelper.init();
-      bool? isDark = CacheHelper.getBoolean(key: 'isDark');
-      runApp(MyApp(isDark!)); // [ERROR:flutter/lib/ui/ui_dart_state.cc(209)] Unhandled Exception: Null check operator used on a null value
+      bool isDark = CacheHelper.getBoolean(key: 'isDark');
+      runApp(MyApp(isDark)); // [ERROR:flutter/lib/ui/ui_dart_state.cc(209)] Unhandled Exception: Null check operator used on a null value
       //  main.<anonymous closure> (package:app_theme_mansour/main.dart:27:26)
     },
     blocObserver: MyBlocObserver(),
