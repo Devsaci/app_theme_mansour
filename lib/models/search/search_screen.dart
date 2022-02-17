@@ -21,6 +21,9 @@ class SearchScreen extends StatelessWidget {
             child: defaultFormField(
               controller: searchController,
               type: TextInputType.text,
+              onChange: (value){
+
+              },
               validate: (String value) {
                 if (value.isEmpty) {
                   return 'search must not be empty';
