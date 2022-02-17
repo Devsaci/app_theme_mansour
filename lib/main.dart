@@ -39,6 +39,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
+      //No Use MultiBlocProvider
       create: (BuildContext context) => NewsCubit()
         ..getBusiness()
         ..getSports()
