@@ -2,6 +2,8 @@
 
 import 'package:app_theme_mansour/layout/news_app/cubit/cubit.dart';
 import 'package:app_theme_mansour/layout/news_app/cubit/states.dart';
+import 'package:app_theme_mansour/models/search/search_screen.dart';
+import 'package:app_theme_mansour/shared/components/components.dart';
 import 'package:app_theme_mansour/shared/network/remote/dio_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -24,7 +26,7 @@ class NewsLayout extends StatelessWidget {
                   Icons.search,
                 ),
                 onPressed: () {
-
+                  navigateTo(context, SearchScreen());
                 },
               ),
               IconButton(
@@ -54,7 +56,6 @@ class NewsLayout extends StatelessWidget {
               items: cubit.bottomItems),
         );
       },
-
     );
   }
 }
