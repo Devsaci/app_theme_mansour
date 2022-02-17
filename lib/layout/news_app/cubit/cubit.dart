@@ -137,6 +137,8 @@ class NewsCubit extends Cubit<NewsStates> {
     }
   }
 
+  List<dynamic> search = [];
+
   // ThemeMode appMode = ThemeMode.dark;
   bool isDark = false;
 

@@ -16,6 +16,7 @@ class SearchScreen extends StatelessWidget {
     return BlocConsumer<NewsCubit, NewsStates>(
         listener: (context, state) {},
         builder: (context, state) {
+          var list = NewsCubit.get(context).search;
           return Scaffold(
             appBar: AppBar(
               title: Text(
