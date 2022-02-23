@@ -11,10 +11,10 @@ Widget defaultFormField({
   GestureTapCallback? onTap,
   bool isPassword = false,
   FormFieldValidator<String>? validate,
-   String? label,
-   IconData? prefix,
+  String? label,
+  IconData? prefix,
   IconData? suffix,
-  VoidCallback?  suffixPressed,
+  VoidCallback? suffixPressed,
   bool isClickable = true,
 }) =>
     TextFormField(
@@ -22,16 +22,18 @@ Widget defaultFormField({
       keyboardType: type,
       obscureText: isPassword,
       enabled: isClickable,
-      onFieldSubmitted: (s){
+      onFieldSubmitted: (s) {
         onSubmit!(s);
       },
-      onChanged: (s){
+      onChanged: (s) {
         onChange!(s);
       },
-      onTap: (){
+      onTap: () {
         onTap!();
       },
-      validator: validate,
+      validator: (s){
+        validate!(s);
+      },
       decoration: InputDecoration(
         labelText: label,
         prefixIcon: Icon(
