@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class SearchScreen extends StatelessWidget {
-  SearchScreen({Key key}) : super(key: key);
+  SearchScreen({Key? key}) : super(key: key);
 
   var searchController = TextEditingController();
 
@@ -34,8 +34,8 @@ class SearchScreen extends StatelessWidget {
                     onChange: (value) {
                       NewsCubit.get(context).getSearch(value);
                     },
-                    validate: (String value) {
-                      if (value.isEmpty) {
+                    validate: (String? value) {
+                      if (value!.isEmpty) {
                         return 'search must not be empty';
                       }
                       return null;

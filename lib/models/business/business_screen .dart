@@ -1,5 +1,4 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
-
 import 'package:app_theme_mansour/layout/news_app/cubit/cubit.dart';
 import 'package:app_theme_mansour/layout/news_app/cubit/states.dart';
 import 'package:app_theme_mansour/shared/components/components.dart';
@@ -10,7 +9,7 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class BusinessScreen extends StatelessWidget {
-  const BusinessScreen({Key key}) : super(key: key);
+  const BusinessScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

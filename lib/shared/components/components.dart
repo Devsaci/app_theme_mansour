@@ -4,17 +4,17 @@ import 'package:conditional_builder_null_safety/conditional_builder_null_safety.
 import 'package:flutter/material.dart';
 
 Widget defaultFormField({
-  @required TextEditingController controller,
-  @required TextInputType type,
-  Function onSubmit,
-  Function onChange,
-  Function onTap,
+  TextEditingController? controller,
+  TextInputType? type,
+  ValueChanged<String>? onSubmit,
+  ValueChanged<String>? onChange,
+  GestureTapCallback? onTap,
   bool isPassword = false,
-  @required Function validate,
-  @required String label,
-  @required IconData prefix,
-  IconData suffix,
-  Function suffixPressed,
+  FormFieldValidator<String>? validate,
+   String? label,
+   IconData? prefix,
+  IconData? suffix,
+  VoidCallback?  suffixPressed,
   bool isClickable = true,
 }) =>
     TextFormField(

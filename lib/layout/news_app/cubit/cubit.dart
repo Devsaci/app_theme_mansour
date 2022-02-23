@@ -3,12 +3,9 @@
 import 'package:app_theme_mansour/layout/news_app/cubit/states.dart';
 import 'package:app_theme_mansour/models/business/business_screen%20.dart';
 import 'package:app_theme_mansour/models/science/science_screen%20.dart';
-import 'package:app_theme_mansour/models/settings/settings_screen%20.dart';
 import 'package:app_theme_mansour/models/sports/sports_screen%20.dart';
 import 'package:app_theme_mansour/shared/network/local/cache_helper.dart';
 import 'package:app_theme_mansour/shared/network/remote/dio_helper.dart';
-import 'package:bloc/bloc.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -161,7 +158,7 @@ class NewsCubit extends Cubit<NewsStates> {
   // ThemeMode appMode = ThemeMode.dark;
   bool isDark = false;
 
-  void changeAppMode({bool fromShared}) {
+  void changeAppMode({bool? fromShared}) {
     if (fromShared != null) {
       isDark = fromShared;
       emit(NewsChangeModeState());

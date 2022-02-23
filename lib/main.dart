@@ -1,13 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_constructors_in_immutables
-
-import 'dart:ui';
-
 import 'package:app_theme_mansour/layout/news_app/cubit/cubit.dart';
 import 'package:app_theme_mansour/layout/news_app/cubit/states.dart';
-import 'package:app_theme_mansour/shared/components/components.dart';
 import 'package:app_theme_mansour/shared/network/local/cache_helper.dart';
-import 'package:bloc/bloc.dart';
-import 'package:conditional_builder_null_safety/example/example.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -23,7 +17,7 @@ void main() {
       WidgetsFlutterBinding.ensureInitialized();
       DioHelper.init();
       await CacheHelper.init();
-      bool isDark = CacheHelper.getBoolean(key: 'isDark');
+      bool? isDark = CacheHelper.getBoolean(key: 'isDark');
       runApp(MyApp(isDark)); // [ERROR:flutter/lib/ui/ui_dart_state.cc(209)] Unhandled Exception: Null check operator used on a null value
       //  main.<anonymous closure> (package:app_theme_mansour/main.dart:27:26)
     },
@@ -32,7 +26,7 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  final bool isDark;
+   bool? isDark;
 
   MyApp(this.isDark);
 
