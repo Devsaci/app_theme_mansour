@@ -25,7 +25,9 @@ Widget defaultFormField({
       onFieldSubmitted: (s){
         onSubmit!(s);
       },
-      onChanged: onChange,
+      onChanged: (s){
+        onChange!(s);
+      },
       onTap: onTap,
       validator: validate,
       decoration: InputDecoration(
