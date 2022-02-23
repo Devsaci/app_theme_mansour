@@ -41,7 +41,9 @@ Widget defaultFormField({
         ),
         suffixIcon: suffix != null
             ? IconButton(
-                onPressed: suffixPressed,
+                onPressed: (){
+                  suffixPressed!();
+                },
                 icon: Icon(
                   suffix,
                 ),
