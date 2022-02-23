@@ -22,7 +22,9 @@ Widget defaultFormField({
       keyboardType: type,
       obscureText: isPassword,
       enabled: isClickable,
-      onFieldSubmitted: onSubmit,
+      onFieldSubmitted: (s){
+        onSubmit!(s);
+      },
       onChanged: onChange,
       onTap: onTap,
       validator: validate,
