@@ -38,7 +38,7 @@ class MyApp extends StatelessWidget {
         ..getBusiness()
         ..getSports()
         ..getScience()
-        ..changeAppMode(fromShared: isDark),// last Update null Safety
+        ..changeAppMode(fromShared: isDark),// last Update null Safety in 95. Shared Preferences
       child: BlocConsumer<NewsCubit, NewsStates>(
         listener: (BuildContext context, state) {},
         builder: (BuildContext context, state) {
