@@ -31,7 +31,7 @@ Widget defaultFormField({
       onTap: () {
         onTap!();
       },
-      validator: (s){
+      validator: (s) {
         validate!(s);
       },
       decoration: InputDecoration(
@@ -41,7 +41,7 @@ Widget defaultFormField({
         ),
         suffixIcon: suffix != null
             ? IconButton(
-                onPressed: (){
+                onPressed: () {
                   suffixPressed!();
                 },
                 icon: Icon(
@@ -53,50 +53,55 @@ Widget defaultFormField({
       ),
     );
 
-Widget buildArticleItem(article, context) => Padding(
-      padding: const EdgeInsets.all(20.0),
-      child: Row(
-        children: [
-          Container(
-            width: 120.0,
-            height: 150.0,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10.0),
-              image: DecorationImage(
-                image: NetworkImage('${article['urlToImage']}'),
-                fit: BoxFit.cover,
-              ),
-            ),
-          ),
-          SizedBox(width: 20.0),
-          Expanded(
-            child: Container(
+Widget buildArticleItem(article, context) => InkWell(
+      child: Padding(
+        padding: const EdgeInsets.all(20.0),
+        child: Row(
+          children: [
+            Container(
+              width: 120.0,
               height: 150.0,
-              child: Column(
-                // mainAxisSize: MainAxisSize.min,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  Expanded(
-                    child: Text(
-                      '${article['title']}',
-                      style: Theme.of(context).textTheme.bodyText1,
-                      maxLines: 3,
-                      overflow: TextOverflow.ellipsis,
-                    ),
-                  ),
-                  Text(
-                    '${article['publishedAt']}',
-                    style: TextStyle(
-                      fontSize: 10,
-                      color: Colors.grey,
-                    ),
-                  ),
-                ],
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10.0),
+                image: DecorationImage(
+                  image: NetworkImage('${article['urlToImage']}'),
+                  fit: BoxFit.cover,
+                ),
               ),
             ),
-          ),
-        ],
+            SizedBox(width: 20.0),
+            Expanded(
+              child: Container(
+                height: 150.0,
+                child: Column(
+                  // mainAxisSize: MainAxisSize.min,
+
+                  crossAxisAlignment: CrossAxisAlignment.start,
+
+                  mainAxisAlignment: MainAxisAlignment.start,
+
+                  children: [
+                    Expanded(
+                      child: Text(
+                        '${article['title']}',
+                        style: Theme.of(context).textTheme.bodyText1,
+                        maxLines: 3,
+                        overflow: TextOverflow.ellipsis,
+                      ),
+                    ),
+                    Text(
+                      '${article['publishedAt']}',
+                      style: TextStyle(
+                        fontSize: 10,
+                        color: Colors.grey,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
     );
 
