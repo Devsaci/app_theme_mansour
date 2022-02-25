@@ -54,6 +54,9 @@ Widget defaultFormField({
     );
 
 Widget buildArticleItem(article, context) => InkWell(
+      onTap: () {
+
+      },
       child: Padding(
         padding: const EdgeInsets.all(20.0),
         child: Row(
