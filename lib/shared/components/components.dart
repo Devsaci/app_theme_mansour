@@ -128,7 +128,7 @@ Widget articleBuilder(list, context, {isSearch = false}) => ConditionalBuilder(
         separatorBuilder: (context, index) => myDivider(),
         itemCount: 10,
       ),
-      fallback: (BuildContext context) => Center(
+      fallback: (BuildContext context) => isSearch ? Container() : Center(
         child: CircularProgressIndicator(),
       ),
     );
