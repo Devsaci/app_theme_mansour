@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
+import 'package:app_theme_mansour/modules/web_view/web_view_screen.dart';
 import 'package:conditional_builder_null_safety/conditional_builder_null_safety.dart';
 import 'package:flutter/material.dart';
 
@@ -55,7 +56,7 @@ Widget defaultFormField({
 
 Widget buildArticleItem(article, context) => InkWell(
       onTap: () {
-
+        navigateTo(context, WebViewScreen(article['url']));
       },
       child: Padding(
         padding: const EdgeInsets.all(20.0),
