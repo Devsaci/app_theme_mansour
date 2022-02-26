@@ -128,9 +128,13 @@ Widget articleBuilder(list, context, {isSearch = false}) => ConditionalBuilder(
         separatorBuilder: (context, index) => myDivider(),
         itemCount: 10,
       ),
-      fallback: (BuildContext context) => isSearch ? Container() : Center(
-        child: CircularProgressIndicator(),
-      ),
+      fallback: (BuildContext context) => isSearch
+          ? Center(
+              child: Container(child: Text('In Progress Wait PLease'),color: Colors.amber),
+            )
+          : Center(
+              child: CircularProgressIndicator(),
+            ),
     );
 
 void navigateTo(context, widget) => Navigator.push(
